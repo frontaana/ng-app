@@ -10,7 +10,7 @@ export class HeavyTaskWorkerService {
     return new Observable<number>((observer) => {
       if (typeof Worker !== 'undefined') {
         const worker = new Worker(
-          new URL('../workers/heavy-task.worker', import.meta.url),
+          new URL('../core/workers/heavy-task.worker', import.meta.url),
           { type: 'module' }
         );
 
