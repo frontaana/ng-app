@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "message": {
+    "email": "andrey.rychagov@veeam.com",
+    "recoveryEmail": "super-veeam-team-corp-123@veaam.com",
+    "secondary_email": "",
+    "first_name": "Andrey",
+    "last_name": "Andreev",
+    "company": "Veeam",
+    "phone": "+996312430997",
+    "privacyConsent": true,
+    "emailPreferences": true,
+    "job_description": "",
+    "country": "USA",
+    "countryLocale": "us",
+    "state": "IL",
+    "city": "Saint-Petersburg",
+    "zip": "192076",
+    "role": "lic-portal-admin",
+    "isAdmin": true,
+    "isSuperAdmin": true,
+    "isContentManager": true,
+    "isInternalAccount": false,
+    "isAccessRestricted": false
+  }
+}
