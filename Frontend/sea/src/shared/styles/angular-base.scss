@@ -1,3 +1,26 @@
+// переменная цвета через --цвет: oklch(
+// переменная цвета-градиента через --цвет: linear-gradient(
+// далее через var(
+// background: color-mix(in srgb,
+
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+
+// gap (display grid flex)
+
+// @media screen and (max-width: 650px) {
+
+// body
+// .main
+// h1
+// p
+
+// .divider
+// .content
+
+// .social-links path a:hover
+// .pill-group .pill .pill:nth-child(6n + 3)
+
 body {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
