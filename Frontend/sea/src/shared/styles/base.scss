@@ -61,10 +61,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  box-sizing: inherit;
+  padding: 3rem; //
+  box-sizing: border-box;
   position: relative;
-  background: var(--red-to-pink-to-purple-vertical-gradient);
 }
 
 .angular-logo {

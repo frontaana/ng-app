@@ -1,4 +1,16 @@
+@import '../../../shared/styles/index.scss';
+
 :host {
   display: block;
   min-height: 100vh;
+}
+
+main {
+  background: linear-gradient(
+    90deg,
+    rgba(232, 236, 242, 0.1) 17%, 
+    rgba(173, 251, 72, 0.86) 58%, 
+    rgba(92, 163, 255, 0.59) 78%,
+    rgba(144, 192, 255, 0.41) 92%, 
+    rgba(232, 236, 242, 0.17) 99%);
 }
