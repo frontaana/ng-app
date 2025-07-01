@@ -12,23 +12,22 @@ import { HeavyTaskWorkerService } from '../../services/heavy-task-worker.service
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  title = 'Cutie';
 
-  workerValue = 999999;
-  result: number | null = null;
+  // workerValue = 999999;
+  // result: number | null = null;
 
-  constructor(private heavyTaskWorkerService: HeavyTaskWorkerService) {}
+  // constructor(private heavyTaskWorkerService: HeavyTaskWorkerService) {}
 
-  public runWorker() {
-    this.result = null;
+  // public runWorker() {
+  //   this.result = null;
 
-    this.heavyTaskWorkerService.run(this.workerValue).subscribe({
-      next: (res) => {
-        console.log('Результат из воркера:', res);
-        this.result = res;
-      },
-      error: (err) => console.error('Ошибка воркера:', err),
-    });
-  }
+  //   this.heavyTaskWorkerService.run(this.workerValue).subscribe({
+  //     next: (res) => {
+  //       console.log('Результат из воркера:', res);
+  //       this.result = res;
+  //     },
+  //     error: (err) => console.error('Ошибка воркера:', err),
+  //   });
+  // }
 
 }
