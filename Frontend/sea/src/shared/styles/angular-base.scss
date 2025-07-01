@@ -82,11 +82,14 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 3rem; //
   box-sizing: border-box;
   position: relative;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
 
 .angular-logo {
