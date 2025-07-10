@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-task-manager',
+  selector: 'asea-task-manager',
   standalone: true,
   imports: [],
   templateUrl: './task-manager.component.html',

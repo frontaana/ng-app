@@ -10,7 +10,7 @@ import { LoaderService } from './services/loader.service';
 import { LoaderComponent } from './shared/loader/loader.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'asea-root',
   standalone: true,
   imports: [
     BaseModalComponent,

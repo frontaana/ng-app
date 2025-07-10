@@ -1,48 +1,50 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { routePaths } from '../../interfaces/enums';
 
 @Component({
-  selector: 'app-header',
+  selector: 'asea-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterLink
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   menu = [
     {
-      key: 'dashboard',
+      key: 'about',
       icon: '',
-      title: 'Task manager',
-      subTitle: 'dashboard',
+      title: 'About', // 2
+      subTitle: 'some details',
+      link: routePaths.about,
       isActive: true,
     },
     {
-      key: 'free-school',
+      key: 'interviews',
       icon: '',
-      title: 'Free school',
-      subTitle: 'business plan - researching and state',
-      isActive: false,
-    },
-    {
-      key: 'free-blog',
-      icon: '',
-      title: 'Free blog', // 2
-      subTitle: 'breath training, posts, my progress',
+      title: 'IT knowledge data', // 2
+      subTitle: 'list and progress bars of themes',
+      link: routePaths.interviews,
       isActive: true,
     },
     {
-      key: 'it-consultations',
+      key: 'consultations',
       icon: '',
       title: 'IT consultations', // 2
       subTitle: 'the questionnaire and my services',
+      link: routePaths.consultations,
       isActive: true,
     },
     {
-      key: 'it-blog',
+      key: 'blog',
       icon: '',
       title: 'IT blog',
       subTitle: 'list of posts',
+      link: routePaths.blog,
       isActive: true,
     },
     {
@@ -50,7 +52,24 @@ export class HeaderComponent {
       icon: '',
       title: 'Competency map', // 1
       subTitle: 'knowledge base',
-      isActive: true,
+      link: 'map',
+      isActive: false,
+    },
+    {
+      key: 'dashboard',
+      icon: '',
+      title: 'Task manager',
+      subTitle: 'dashboard',
+      link: 'dashboard',
+      isActive: false,
+    },
+    {
+      key: 'free-school',
+      icon: '',
+      title: 'Free school',
+      subTitle: 'business plan - researching and state',
+      link: 'free-school',
+      isActive: false,
     },
   ];
   
