@@ -1,8 +1,8 @@
 .spinner {
-  animation: rotation 2s infinite linear;
+  animation: spinner-rotation 2s infinite linear;
 }
 
-@keyframes rotation {
+@keyframes spinner-rotation {
   from {
     transform: rotate(0deg);
   }

@@ -1,3 +1,13 @@
-<app-loader></app-loader>
 
-<router-outlet />
+<app-loader *ngIf="(preloader$ | async)"></app-loader>
+
+<div class="wrapper">
+  <app-header></app-header>
+  <main>
+    <router-outlet />
+  </main>
+  <app-footer></app-footer>
+  <!-- <app-sidebar></app-sidebar>
+  <app-base-modal></app-base-modal> -->
+</div>
+
