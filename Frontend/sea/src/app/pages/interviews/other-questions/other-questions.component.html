@@ -1,0 +1,11 @@
+<h1>Technologies</h1>
+
+<h2>Web workers</h2>
+<div class="content">
+  <p>Web Worker</p>
+
+  <input type="number" [(ngModel)]="workerValue" placeholder="Введите число" />
+  <button (click)="runWorker()">Run</button>
+
+  <p *ngIf="result !== null">The result is: {{ result }}</p>
+</div>

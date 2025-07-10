@@ -1,0 +1,18 @@
+<h2>#1</h2>
+<ng-container
+  *ngTemplateOutlet="recursiveList; context: { $implicit: containers }"
+></ng-container>
+
+<ng-template #recursiveList let-list>
+  <ul class="nobullet">
+    <li *ngFor="let item of list">
+      {{ getTitle(item.title) }}
+
+      <ng-container *ngIf="item.childs">
+        <ng-container
+          *ngTemplateOutlet="recursiveList; context: { $implicit: item.childs }"
+        ></ng-container>
+      </ng-container>
+    </li>
+  </ul>
+</ng-template>
