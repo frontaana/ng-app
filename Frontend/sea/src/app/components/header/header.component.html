@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="header__sidebar-icon"></div>
+  <div class="header__menu menu">
+    <ng-container *ngFor="let item of menu" >
+      <div *ngIf="item.isActive" class="menu__item">
+        <span class="menu__title">{{ item.title }}</span>
+        <span class="menu__divider"></span>
+        <span class="menu__subtitle">{{ item.subTitle }}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="header__auth"></div>
+</div>
