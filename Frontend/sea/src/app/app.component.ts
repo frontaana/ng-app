@@ -6,7 +6,7 @@ import { BaseModalComponent } from './components/base-modal/base-modal.component
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { LoaderService } from './services/state.service';
+import { LoaderService } from './services/loader.service';
 import { LoaderComponent } from './shared/loader/loader.component';
 
 @Component({
