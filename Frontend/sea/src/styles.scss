@@ -1,3 +1,8 @@
 @import './shared/styles/index.scss';
 
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
 /* You can add global styles to this file, and also import other style files */

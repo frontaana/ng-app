@@ -1,12 +1,29 @@
-<main class="center">
-  <h1 class="spinner">Hello, {{ title }}!</h1>
+<h1>Hello, {{ title }}! Здесь будут задачи с собесов</h1>
 
-  <!-- <div class="content">
-    <p>Web Worker</p>
+<h2>Итак, №1</h2>
+<ng-container
+  *ngTemplateOutlet="recursiveList; context: { $implicit: containers }"
+></ng-container>
 
-    <input type="number" [(ngModel)]="workerValue" placeholder="Введите число" />
-    <button (click)="runWorker()">Run</button>
-  
-    <p *ngIf="result !== null">The result is: {{ result }}</p>
-  </div> -->
-</main>
+<ng-template #recursiveList let-list>
+  <ul class="nobullet">
+    <li *ngFor="let item of list">
+      {{ getTitle(item.title) }}
+
+      <ng-container *ngIf="item.childs">
+        <ng-container
+          *ngTemplateOutlet="recursiveList; context: { $implicit: item.childs }"
+        ></ng-container>
+      </ng-container>
+    </li>
+  </ul>
+</ng-template>
+
+<!-- <div class="content">
+  <p>Web Worker</p>
+
+  <input type="number" [(ngModel)]="workerValue" placeholder="Введите число" />
+  <button (click)="runWorker()">Run</button>
+
+  <p *ngIf="result !== null">The result is: {{ result }}</p>
+</div> -->
