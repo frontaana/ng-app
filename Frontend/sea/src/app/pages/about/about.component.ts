@@ -18,6 +18,18 @@ import { delay, from, map, of } from 'rxjs';
 export class AboutComponent implements OnInit {
   public title = `Cutiest`;
 
+  notes = [
+    'Что сложного? (а)',
+    'Senior frontend developer',
+    'Тренер по фридайвингу',
+    'Мужчина-опора, щедрый',
+    'Сон вовремя',
+    'Питание чистое',
+    'АПП без сладкого',
+    'Ресурсная',
+    'Отлетевшая',
+  ]
+
   ngOnInit() {
     // this.title.pipe(
     //   delay(10000),
