@@ -5,20 +5,5 @@ $light-blue: #90C0FF;
 $midnight-blue: #02275A;
 $dark-gray: #091A24;
 
-body {
-  --gray-to-green-to-blue-vertical-gradient: linear-gradient(
-    180deg,
-    $bright-gray,
-    $green-yellow,
-    $light-blue
-  );
-  
-  --gray-to-green-to-blue-horizontal-gradient: linear-gradient(
-    90deg,
-    $bright-gray 0%,
-    $green-yellow 50%,
-    $light-blue 100%
-  );
-}
 
 
