@@ -1,15 +1,15 @@
 import { Entity, Permissions } from "../core/interfaces/properties";
 
 export interface Task extends Entity {
-  sphereOfLife?: LifeSphere,
-  purposeOfLife?: LifePurpose,
-  description?: string,
-  location?: Location,
-  participants?: Participant[],
-  state?: State,
-  priority?: Priority,
-  cost?: Cost,
-  permissions?: Permissions[],
+  sphereOfLife: LifeSphere,
+  purposeOfLife: LifePurpose,
+  description: string,
+  location: Location,
+  participants: Participant[],
+  state: State,
+  priority: Priority,
+  cost: Cost,
+  permissions: Permissions[],
 }
 
 // сфера жизни (для распределения по кругу)
@@ -68,4 +68,3 @@ export enum Cost {
   medium,
   high
 }
-

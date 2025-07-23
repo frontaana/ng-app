@@ -1,14 +1,15 @@
-// 'смотреть кино'
-// 'убраться дома'
-// 'погулка, кафе'
-// 'продажи на авито'
-// 'спорт каждый день'
-// 'кремик каждый день'
-// 'волосы через день'
-// 'свидания'
+import { Cost, LifePurpose, LifeSphere, Location, Participant, Priority, State, Task } from "../interfaces/tasks";
 
-import { LifeSphere, Task } from "../interfaces/tasks";
-
+export const tasks_important = [
+  'убраться дома',
+  'прогулка и кафе для мотивации',
+  'спорт и исследование',
+  'продажи на авито',
+  'спорт каждый день',
+  'кремик каждый день',
+  'волосы через день',
+  'свидание',
+]
 
 export const tasks: Task[] = [
   {
@@ -16,52 +17,12 @@ export const tasks: Task[] = [
     title: 'смотреть кино',
     description: '',
     sphereOfLife: LifeSphere.relationships,
-    purposeOfLife: 'environment',
-    location: 'outside',
-    participants: ['me', 'friends','boyfriend'],
-    state: 'backlog',
-    priority: 'later',
-    cost: 'medium',
+    purposeOfLife: LifePurpose.environment,
+    location: Location.outside,
+    participants: [Participant.me, Participant.friends, Participant.boyfriend],
+    state: State.backlog,
+    priority: Priority.later,
+    cost: Cost.medium,
     permissions: [1]
   },
-  {
-    id: '002',
-    title: 'убраться дома',
-  },
-  {
-    id: '003',
-    title: 'прогулка и кафе для мотивации',
-  },
-  {
-    id: '004',
-    title: 'спорт и исследование',
-  },
-  {
-    id: '005',
-    title: 'продажи на авито',
-  },
-  {
-    id: '006',
-    title: 'спорт каждый день',
-  },
-  {
-    id: '007',
-    title: 'кремик каждый день',
-  },
-  {
-    id: '008',
-    title: 'волосы через день',
-  },
-  {
-    id: '009',
-    title: 'свидание',
-  },
-  {
-    id: '000',
-    title: 'х',
-  },
-  {
-    id: '000',
-    title: 'х',
-  }
 ];
