@@ -7,6 +7,7 @@
       <mat-panel-description>
         Questions level {{item.level}}
         <mat-icon>javascript</mat-icon>
+        <mat-checkbox></mat-checkbox>
       </mat-panel-description>
     </mat-expansion-panel-header>
 
@@ -15,7 +16,7 @@
         <ul>
         @for (content of item.contentData; track content) {
           <li>
-            <mat-checkbox>{{ deleteDot(content) }}</mat-checkbox>
+            <mat-checkbox [checked]="content.completed">{{ content.title }}</mat-checkbox>
           </li>
         }
         </ul>

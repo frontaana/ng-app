@@ -9,6 +9,12 @@ import {MatIconModule} from '@angular/material/icon';
 import { js_questions_response } from './competence-map.const';
 import { CommonModule } from '@angular/common';
 
+type contentData = {
+  title: '',
+  description: '',
+  completed: false,
+}
+
 @Component({
   selector: 'asea-consultations',
   standalone: true,
@@ -32,23 +38,32 @@ export class ConsultationsComponent {
 
   response = js_questions_response;
 
-  data: { title: string, level: number, contentData: string[] }[] = [];
+  // data: { title: string, level: number, contentData: string[] }[] = [];
+
+  data: { title: string, level: number, contentData: contentData[] }[] = [];
 
   constructor() {
-    this.getData(js_questions_response);
+    this.transformData(js_questions_response);
   }
 
-  getData(response: { data: string, level: number }[]): void {
+  transformData(response: { data: string, level: number }[]): void {
+
     this.data = response.map(item => {
+
+      const contentData = item.data.split(". ").map(text => {
+        return {
+          title: text,
+          description: '',
+          completed: false,
+        } as contentData;
+      });
+
       return {
         title: 'Javascript',
         level: item.level,
-        contentData: item.data.split(". ")
+        contentData: contentData,
       }
-    })
+    });
   }
 
-  deleteDot(string: string): string {
-    return string.replace(/\./, '');
-  }
 }
