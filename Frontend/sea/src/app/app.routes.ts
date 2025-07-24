@@ -18,7 +18,7 @@ export const routes: Routes = [
     canActivate: [ ],
     canActivateChild: [],
     children: [
-      { path: '', redirectTo: routePaths.about, pathMatch: 'full'},
+      { path: '', redirectTo: routePaths.consultations, pathMatch: 'full'},
       { path: routePaths.interviews, component: InterviewsComponent },
       { path: routePaths.interviewsNg, component: NgQuestionsComponent, pathMatch: 'full'},
       { path: routePaths.interviewsJs, component: JSQuestionsComponent, pathMatch: 'full'},
