@@ -32,6 +32,7 @@ interface Theme extends ThemeEntity {
 interface Question extends ThemeEntity {
   competence: Category;
   level: Level;
+  completed: boolean;
 }
 
 // data
@@ -46,6 +47,7 @@ export const js_questions_view: Question[] = [
     title: 'Понимание концепции и смысла DOM',
     competence: Category.js,
     level: Level.one,
+    completed: false,
   },
 ];
   

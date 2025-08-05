@@ -6,14 +6,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
-import { js_questions_response } from './competence-map.const';
 import { CommonModule } from '@angular/common';
 
-type contentData = {
-  title: '',
-  description: '',
-  completed: false,
-}
+import { architecture_questions_response, css_questions_response, dev_tools_questions_response, html_questions_response, js_questions_response, protocols_questions_response, ts_questions_response } from './competence-map.const';
+
+import { contentData, Themes, Titles } from './consultations.interfaces';
 
 @Component({
   selector: 'asea-consultations',
@@ -36,19 +33,32 @@ export class ConsultationsComponent {
   Mexican state of Chihuahua and is among the smallest of all dog breeds. It is
   usually kept as a companion animal or for showing.`;
 
-  response = js_questions_response;
+  data_js: Themes[] = [];
+  data_ts: Themes[] = [];
+  data_html: Themes[] = [];
+  data_css: Themes[] = [];
+  data_architecture: Themes[] = [];
+  data_dev_tools: Themes[] = [];
+  data_protocols: Themes[] = [];
 
-  // data: { title: string, level: number, contentData: string[] }[] = [];
-
-  data: { title: string, level: number, contentData: contentData[] }[] = [];
+  data: Themes[][] = [];
 
   constructor() {
-    this.transformData(js_questions_response);
+    this.data_js = this.transformData(js_questions_response, Titles.js);
+    this.data_ts = this.transformData(ts_questions_response, Titles.ts);
+    this.data_html = this.transformData(html_questions_response, Titles.html);
+    this.data_css = this.transformData(css_questions_response, Titles.css);
+    this.data_architecture = this.transformData(architecture_questions_response, Titles.architecture);
+    this.data_dev_tools = this.transformData(dev_tools_questions_response, Titles.dev_tools);
+    this.data_protocols = this.transformData(protocols_questions_response, Titles.protocols);
+
+    this.data = [this.data_js, this.data_ts, this.data_html, this.data_css, this.data_architecture, this.data_dev_tools, this.data_protocols];
   }
 
-  transformData(response: { data: string, level: number }[]): void {
+  
+  transformData(response: { data: string, level: number }[], title: Titles) {
 
-    this.data = response.map(item => {
+    return response.map(item => {
 
       const contentData = item.data.split(". ").map(text => {
         return {
@@ -59,7 +69,7 @@ export class ConsultationsComponent {
       });
 
       return {
-        title: 'Javascript',
+        title: title,
         level: item.level,
         contentData: contentData,
       }

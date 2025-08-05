@@ -2,6 +2,8 @@
 
 .example-card {
   max-width: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .example-card-footer {
@@ -15,4 +17,10 @@ mat-card-content p {
 ul {
   list-style-type: none;
   margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0 8px 8px 0;
+  }
 }
