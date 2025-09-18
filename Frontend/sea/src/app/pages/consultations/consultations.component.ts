@@ -8,9 +8,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
-import { architecture_questions_response, css_questions_response, dev_tools_questions_response, html_questions_response, js_questions_response, protocols_questions_response, ts_questions_response } from './competence-map.const';
+import { architecture_questions_response, css_questions_response, dev_tools_questions_response, html_questions_response, js_questions_response, protocols_questions_response, ts_questions_response } from '../../constants/competence-map';
 
-import { contentData, Themes, Titles } from './consultations.interfaces';
+import { contentData, Themes, Titles } from '../../interfaces/consultations';
 
 @Component({
   selector: 'asea-consultations',

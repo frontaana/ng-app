@@ -6,5 +6,8 @@ export enum routePaths {
   interviewsOthers = 'interviews/others',
   consultations = 'consultations',
   blog = 'blog',
-  about = 'about'
+  about = 'about',
+  map = 'map',
+  dashboard = 'dashboard',
+  planner = 'planner',
 }

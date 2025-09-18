@@ -29,7 +29,7 @@ export class HeaderComponent {
       title: 'IT knowledge data', // 2
       subTitle: 'list and progress bars of themes',
       link: routePaths.interviews,
-      isActive: true,
+      isActive: false,
     },
     {
       key: 'consultations',
@@ -45,14 +45,14 @@ export class HeaderComponent {
       title: 'IT blog',
       subTitle: 'list of posts',
       link: routePaths.blog,
-      isActive: true,
+      isActive: false,
     },
     {
       key: 'competency-map',
       icon: '',
       title: 'Competency map', // 1
       subTitle: 'knowledge base',
-      link: 'map',
+      link: routePaths.map,
       isActive: false,
     },
     {
@@ -60,7 +60,7 @@ export class HeaderComponent {
       icon: '',
       title: 'Task manager',
       subTitle: 'dashboard',
-      link: 'dashboard',
+      link: routePaths.dashboard,
       isActive: false,
     },
     {
@@ -70,6 +70,14 @@ export class HeaderComponent {
       subTitle: 'business plan - researching and state',
       link: 'free-school',
       isActive: false,
+    },
+    {
+      key: 'free-school',
+      icon: '',
+      title: 'Online planner',
+      subTitle: 'Planner "For years", about choice, work, joy, life',
+      link: routePaths.planner,
+      isActive: true,
     },
   ];
   
