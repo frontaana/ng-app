@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoaderService } from './services/loader.service';
-import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @Component({
   selector: 'asea-root',
