@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'asea-planner',
+  standalone: true,
+  imports: [],
+  templateUrl: './planner.component.html',
+  styleUrl: './planner.component.scss'
+})
+export class PlannerComponent {
+
+}

@@ -10,6 +10,7 @@ import { JSQuestionsComponent } from './pages/interviews/js-questions/js-questio
 import { NgQuestionsComponent } from './pages/interviews/ng-questions/ng-questions.component';
 import { OtherQuestionsComponent } from './pages/interviews/other-questions/other-questions.component';
 import { RxjsQuestionsComponent } from './pages/interviews/rxjs-questions/rxjs-questions.component';
+import { PlannerComponent } from './components/planner/planner.component';
 
 export const routes: Routes = [
   {
@@ -18,7 +19,7 @@ export const routes: Routes = [
     canActivate: [ ],
     canActivateChild: [],
     children: [
-      { path: '', redirectTo: routePaths.consultations, pathMatch: 'full'},
+      { path: '', redirectTo: routePaths.planner, pathMatch: 'full'},
       { path: routePaths.interviews, component: InterviewsComponent },
       { path: routePaths.interviewsNg, component: NgQuestionsComponent, pathMatch: 'full'},
       { path: routePaths.interviewsJs, component: JSQuestionsComponent, pathMatch: 'full'},
@@ -27,6 +28,7 @@ export const routes: Routes = [
       { path: routePaths.consultations, component: ConsultationsComponent, pathMatch: 'full'},
       { path: routePaths.blog, component: BlogComponent, pathMatch: 'full'},
       { path: routePaths.about, component: AboutComponent, pathMatch: 'full'},
+      { path: routePaths.planner, component: PlannerComponent, pathMatch: 'full'},
     ]
   },
   { path: '**', redirectTo: '/'}
