@@ -56,11 +56,11 @@ export class ConsultationsComponent {
   }
 
   
-  transformData(response: { data: string, level: number }[], title: Titles) {
+  transformData(response: { title: string, level: number }[], title: Titles) {
 
     return response.map(item => {
 
-      const contentData = item.data.split(". ").map(text => {
+      const contentData = item.title.split(". ").map(text => {
         return {
           title: text,
           description: '',
