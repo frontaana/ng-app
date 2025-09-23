@@ -1,0 +1,5 @@
+<mat-nav-list>
+  @for (task of tasksList; track task) {
+    <a mat-list-item [routerLink]="task.link" [activated]="task.isActive">{{ task.title }}</a>
+  }
+</mat-nav-list>
