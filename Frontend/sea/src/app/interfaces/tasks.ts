@@ -12,7 +12,6 @@ export interface Task extends Entity {
   permissions: Permissions[],
 }
 
-// сфера жизни (для распределения по кругу)
 export enum LifeSphere {
   health,
   family,
@@ -23,14 +22,7 @@ export enum LifeSphere {
   career,
   finance,
 }
-// делаю дома / делаю вне дома
-// делаю одна / с кем-то
 
-// цель - забота о себе - здоровье
-// цель - семья         - семья
-// цель - окружение     - отношения
-// цель - фридайвинг    - путешествие, духовость, творчество, карьера
-// цель - деньги        - финансы
 export enum LifePurpose {
   money,
   freediving,

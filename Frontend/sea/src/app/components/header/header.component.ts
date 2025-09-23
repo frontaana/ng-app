@@ -18,69 +18,27 @@ export class HeaderComponent {
     {
       key: 'about',
       icon: '',
-      title: 'About', // 2
+      title: 'About',
       subTitle: 'some details',
       link: routePaths.about,
       isActive: true,
     },
     {
-      key: 'interviews',
-      icon: '',
-      title: 'IT knowledge data', // 2
-      subTitle: 'list and progress bars of themes',
-      link: routePaths.interviews,
-      isActive: false,
-    },
-    {
       key: 'consultations',
       icon: '',
-      title: 'IT consultations', // 2
-      subTitle: 'the questionnaire and my services',
+      title: 'IT consultations',
+      subTitle: 'the questionnaire',
       link: routePaths.consultations,
       isActive: true,
     },
     {
-      key: 'blog',
-      icon: '',
-      title: 'IT blog',
-      subTitle: 'list of posts',
-      link: routePaths.blog,
-      isActive: false,
-    },
-    {
       key: 'competency-map',
       icon: '',
-      title: 'Competency map', // 1
+      title: 'Competency map',
       subTitle: 'knowledge base',
       link: routePaths.map,
       isActive: false,
     },
-    {
-      key: 'dashboard',
-      icon: '',
-      title: 'Task manager',
-      subTitle: 'dashboard',
-      link: routePaths.dashboard,
-      isActive: false,
-    },
-    {
-      key: 'free-school',
-      icon: '',
-      title: 'Free school',
-      subTitle: 'business plan - researching and state',
-      link: 'free-school',
-      isActive: false,
-    },
-    {
-      key: 'free-school',
-      icon: '',
-      title: 'Online planner',
-      subTitle: 'Planner "For years", about choice, work, joy, life',
-      link: routePaths.planner,
-      isActive: true,
-    },
   ];
-  
-  // menu = ['Business plan', 'Form', 'Опрос', 'Table']
 
 }

@@ -13,28 +13,24 @@ export class UserService {
   private actionUrl: string;
   users: User[] = [
     {
-      id: 001,
+      id: '001',
       name: 'Anna',
       old: 25,
-      teen: false,
     },
     {
-      id: 002,
+      id: '002',
       name: 'Denis',
       old: 35,
-      teen: false,
     },
     {
-      id: 003,
+      id: '003',
       name: 'Artem',
       old: 45,
-      teen: false,
     },
     {
-      id: 004,
+      id: '004',
       name: 'Alena',
       old: 15,
-      teen: true,
     },
   ];
   // users$: Observable<User[]>;

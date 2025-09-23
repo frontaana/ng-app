@@ -35,7 +35,7 @@ interface Question extends ThemeEntity {
   completed: boolean;
 }
 
-// Целевой формат данных
+// target info format
 export const js_questions_view: Question[] = [
   {
     title: 'Понимание концепции и смысла DOM',

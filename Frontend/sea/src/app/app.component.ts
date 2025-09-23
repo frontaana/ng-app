@@ -39,7 +39,3 @@ export class AppComponent implements OnInit {
     }, 3000);
   }
 }
-
-// сервер, отдавать данные, потренить RXJS и промисы
-// разные данные, потренить Typescript
-// своя UI библиотека компонентов
