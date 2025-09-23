@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'asea-ng-questions',
+  selector: 'ng-app-ng-questions',
   standalone: true,
   imports: [
     CommonModule

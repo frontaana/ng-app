@@ -10,7 +10,7 @@ import { LoaderService } from './services/loader.service';
 import { LoaderComponent } from './components/loader/loader.component';
 
 @Component({
-  selector: 'asea-root',
+  selector: 'ng-app-root',
   standalone: true,
   imports: [
     BaseModalComponent,

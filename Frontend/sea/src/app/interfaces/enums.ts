@@ -3,4 +3,5 @@ export enum routePaths {
   about = 'about',
   map = 'map',
   planner = 'planner',
+  sandbox = 'sandbox',
 }

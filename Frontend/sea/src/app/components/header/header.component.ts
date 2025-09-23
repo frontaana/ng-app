@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { routePaths } from '../../interfaces/enums';
 
 @Component({
-  selector: 'asea-header',
+  selector: 'ng-app-header',
   standalone: true,
   imports: [
     CommonModule,

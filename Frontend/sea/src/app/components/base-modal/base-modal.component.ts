@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'asea-base-modal',
+  selector: 'ng-app-base-modal',
   standalone: true,
   imports: [],
   templateUrl: './base-modal.component.html',
