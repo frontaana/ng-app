@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { routePaths } from '../../interfaces/enums';
 
 @Component({
-  selector: 'asea-header',
+  selector: 'ng-app-header',
   standalone: true,
   imports: [
     CommonModule,
@@ -21,6 +21,14 @@ export class HeaderComponent {
       title: 'About',
       subTitle: 'some details',
       link: routePaths.about,
+      isActive: false,
+    },
+    {
+      key: 'features',
+      icon: '',
+      title: 'Features',
+      subTitle: 'code examples',
+      link: routePaths.features,
       isActive: true,
     },
     {

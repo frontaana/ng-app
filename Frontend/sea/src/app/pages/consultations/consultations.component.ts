@@ -13,7 +13,7 @@ import { architecture_questions_response, css_questions_response, dev_tools_ques
 import { contentData, Themes, Titles } from '../../interfaces/consultations';
 
 @Component({
-  selector: 'asea-consultations',
+  selector: 'ng-app-consultations',
   standalone: true,
   imports: [
     CommonModule,

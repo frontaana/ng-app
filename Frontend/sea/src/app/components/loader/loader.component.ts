@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { LoaderService } from '../../services/loader.service';
 
 @Component({
-  selector: 'asea-loader',
+  selector: 'ng-app-loader',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './loader.component.html',

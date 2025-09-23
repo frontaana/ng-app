@@ -6,7 +6,7 @@ import { HeavyTaskWorkerService } from '../../services/heavy-task-worker.service
 import { delay, from, map, of } from 'rxjs';
 
 @Component({
-  selector: 'asea-about',
+  selector: 'ng-app-about',
   standalone: true,
   imports: [
     CommonModule,

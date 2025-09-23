@@ -2,15 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'asea-ng-questions',
+  selector: 'ng-app-folders',
   standalone: true,
   imports: [
     CommonModule
   ],
-  templateUrl: './ng-questions.component.html',
-  styleUrl: './ng-questions.component.scss'
+  templateUrl: './folders.component.html',
+  styleUrl: './folders.component.scss'
 })
-export class NgQuestionsComponent {
+export class FoldersComponent {
   public containers = [
     {
       title: '1',
