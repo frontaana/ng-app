@@ -5,4 +5,5 @@ export enum routePaths {
   planner = 'planner',
   features = 'features',
   form = 'form',
+  redux = 'redux',
 }

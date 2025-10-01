@@ -47,6 +47,14 @@ export class HeaderComponent {
       link: routePaths.map,
       isActive: false,
     },
+    {
+      key: 'redux',
+      icon: '',
+      title: 'Redux implements',
+      subTitle: 'NgRx, NgXs, Akita',
+      link: routePaths.redux,
+      isActive: true,
+    },
   ];
 
 }
