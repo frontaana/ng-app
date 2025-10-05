@@ -1,1 +1,33 @@
-<p>form works!</p>
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+
+<form action="" [formGroup]="formNew" (ngSubmit)="onSubmit()">
+  <label for="firstName"></label>
+  <input id="firstName" type="text" formControlName="firstName">
+  
+  <div formGroupName="address">
+    <h3>Address</h3>
+
+    <label for="street"></label>
+    <input id="street" type="text" formControlName="street">
+
+  </div>
+
+  <div formGroupArray="aliases">
+    <h3>Aliases</h3>
+    <button type="button" (click)="addAlias()">Add another alias</button>
+<!-- $index встроенная переменная, доступная внутри блока @for -->
+    @for (alias of aliases.controls; track $index ; let i = $index) {
+      <div>
+        <label for="alias{{ i }}"></label>
+        <input id="alias{{ i }}" type="text" [formControlName]="i">
+      </div>
+    }
+  </div>
+
+  <button></button>
+  <button type="submit" [disabled]="!formNew.valid"></button>
+</form>
+
+<p>Form Value {{ formNew.value }}</p>
+<p>Form Status {{ formNew.status }}</p>
