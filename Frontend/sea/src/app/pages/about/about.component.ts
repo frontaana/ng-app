@@ -16,7 +16,7 @@ import { delay, from, map, of } from 'rxjs';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
-  public title = `Cutiest`;
+  public title = `Student`;
 
   ngOnInit() {
     // this.title.pipe(

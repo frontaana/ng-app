@@ -4,8 +4,8 @@ import { routePaths } from './interfaces/enums';
 
 import { AboutComponent } from './pages/about/about.component';
 import { ConsultationsComponent } from './pages/consultations/consultations.component';
-import { FeaturesComponent } from './pages/features/features.component';
-import { FormComponent } from './pages/features/tasks/form/form.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { FormComponent } from './pages/form/form.component';
 
 
 export const routes: Routes = [
@@ -15,11 +15,11 @@ export const routes: Routes = [
     canActivate: [ ],
     canActivateChild: [],
     children: [
-      { path: '', redirectTo: routePaths.features, pathMatch: 'full'},
+      { path: '', redirectTo: routePaths.consultations, pathMatch: 'full'},
       { path: routePaths.consultations, component: ConsultationsComponent, pathMatch: 'full'},
+      { path: `${routePaths.consultations}/${routePaths.form}`, component: FormComponent, pathMatch: 'full'},
+      { path: routePaths.articles, component: ArticlesComponent, pathMatch: 'full'},
       { path: routePaths.about, component: AboutComponent, pathMatch: 'full'},
-      { path: routePaths.features, component: FeaturesComponent, pathMatch: 'full'},
-      { path: `${routePaths.features}/${routePaths.form}`, component: FormComponent, pathMatch: 'full'},
     ]
   },
   { path: '**', redirectTo: '/'}
