@@ -31,14 +31,10 @@
     cursor: pointer;
 
     &:hover {
+      .menu__title,
       .menu__subtitle {
-        color: var(--gray-900);
-        transition: color 0.7s;
-      }
-
-      .menu__divider {
-        background-color: $midnight-blue;
-        transition: background-color 0.7s;
+        color: $card-background-color;
+        transition: color 0.9s;
       }
     }
   }
