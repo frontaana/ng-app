@@ -8,12 +8,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderComponent } from './components/loader/loader.component';
+import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'ng-app-root',
   standalone: true,
   imports: [
     BaseModalComponent,
+    CardComponent,
     CommonModule,
     FooterComponent,
     HeaderComponent,
