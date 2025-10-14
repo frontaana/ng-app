@@ -11,11 +11,6 @@
 
 @mixin background-gradient {
   --bc-blue-green-gradient: linear-gradient(
-    217deg,
-    rgb(46 154 255 / 1),
-    rgb(255 100 100 / 0) 70.71%
-  ),
-  linear-gradient(
     127deg,
     rgb(173 251 72 / 1),
     rgb(100 255 100 / 0) 70.71%

@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 
 import { contentData, Themes, Titles } from '../../interfaces/consultations';
 import { js_questions_response, ts_questions_response, html_questions_response, css_questions_response, architecture_questions_response, dev_tools_questions_response, protocols_questions_response } from '../../constants/competence-map';
+import { CardComponent } from '../../components/card/card.component';
 
 @Component({
   selector: 'ng-app-articles',
@@ -20,14 +21,19 @@ import { js_questions_response, ts_questions_response, html_questions_response, 
     MatCheckboxModule,
     MatExpansionModule,
     MatIconModule,
+    CardComponent
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss'
 })
 export class ArticlesComponent {
+  
+  card = {
+    title: 'Quizzes',
+    subTitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eaque tempora.'
+  }
 
-
-    // accordion = viewChild.required(MatAccordion);
+  // accordion = viewChild.required(MatAccordion);
 
   longText = `The Chihuahua is a Mexican breed of toy dog. It is named for the
   Mexican state of Chihuahua and is among the smallest of all dog breeds. It is
