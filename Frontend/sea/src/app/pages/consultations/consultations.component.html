@@ -1,5 +1,7 @@
+<h2>Consultations</h2>
+
 <mat-nav-list>
   @for (item of list; track item) {
-    <a mat-list-item [routerLink]="item.link" [activated]="item.isActive">{{ item.title }}</a>
+    <a class="item" mat-list-item [routerLink]="item.link" [activated]="item.isActive">{{ item.title }}</a>
   }
 </mat-nav-list>

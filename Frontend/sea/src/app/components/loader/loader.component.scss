@@ -16,7 +16,7 @@
   display: block;
   margin:15px auto;
   position: relative;
-  color: $light-blue;
+  color: $violet;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
@@ -28,14 +28,14 @@
   width: 124px;
   height: 124px;
   top: 0;
-  background-color: $light-blue;
+  background-color: $violet;
   border-radius: 50%;
   animation: scale50 1s infinite ease-in-out;
 }
 .loader::before {
   top: auto;
   bottom: 0;
-  background-color: $green-yellow;
+  background-color: $text-dark-blue;
   animation-delay: 0.5s;
 }
 
