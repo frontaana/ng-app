@@ -17,9 +17,11 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: routePaths.consultations, pathMatch: 'full'},
       { path: routePaths.consultations, component: ConsultationsComponent, pathMatch: 'full'},
+      { path: `${routePaths.consultations}/${routePaths.map}`, component: ConsultationsComponent, pathMatch: 'full'},
       { path: `${routePaths.consultations}/${routePaths.form}`, component: FormComponent, pathMatch: 'full'},
       { path: routePaths.articles, component: ArticlesComponent, pathMatch: 'full'},
       { path: routePaths.about, component: AboutComponent, pathMatch: 'full'},
+    
     ]
   },
   { path: '**', redirectTo: '/'}
