@@ -6,14 +6,13 @@ import { HeavyTaskWorkerService } from '../../services/heavy-task-worker.service
 import { delay, from, map, of } from 'rxjs';
 
 @Component({
-  selector: 'ng-app-about',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+    selector: 'ng-app-about',
+    imports: [
+        CommonModule,
+        FormsModule
+    ],
+    templateUrl: './about.component.html',
+    styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
   public title = `Student`;

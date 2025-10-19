@@ -4,14 +4,13 @@ import { RouterLink } from '@angular/router';
 import { routePaths } from '../../interfaces/enums';
 
 @Component({
-  selector: 'ng-app-header',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'ng-app-header',
+    imports: [
+        CommonModule,
+        RouterLink
+    ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   menu = [
@@ -32,7 +31,7 @@ export class HeaderComponent {
       isActive: true,
     },
     {
-      key: 'articless',
+      key: 'articles',
       icon: '',
       title: 'IT articless',
       subTitle: 'read and learn',

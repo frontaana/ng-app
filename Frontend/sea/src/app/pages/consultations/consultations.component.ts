@@ -5,14 +5,13 @@ import { MatListModule } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'ng-app-consultations',
-  standalone: true,
-  imports: [
-    MatListModule,
-    RouterLink
-  ],
-  templateUrl: './consultations.component.html',
-  styleUrl: './consultations.component.scss'
+    selector: 'ng-app-consultations',
+    imports: [
+        MatListModule,
+        RouterLink
+    ],
+    templateUrl: './consultations.component.html',
+    styleUrl: './consultations.component.scss'
 })
 export class ConsultationsComponent {
   list = [
