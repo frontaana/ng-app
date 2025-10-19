@@ -6,11 +6,10 @@ interface Card {
 }
 
 @Component({
-  selector: 'ng-app-card',
-  standalone: true,
-  imports: [],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+    selector: 'ng-app-card',
+    imports: [],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.scss'
 })
 export class CardComponent {
   @Input() card!: Card; 

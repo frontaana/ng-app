@@ -12,19 +12,18 @@ import { js_questions_response, ts_questions_response, html_questions_response, 
 import { CardComponent } from '../../components/card/card.component';
 
 @Component({
-  selector: 'ng-app-articles',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatExpansionModule,
-    MatIconModule,
-    CardComponent
-  ],
-  templateUrl: './articles.component.html',
-  styleUrl: './articles.component.scss'
+    selector: 'ng-app-articles',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatExpansionModule,
+        MatIconModule,
+        CardComponent
+    ],
+    templateUrl: './articles.component.html',
+    styleUrl: './articles.component.scss'
 })
 export class ArticlesComponent {
   

@@ -11,19 +11,19 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { CardComponent } from './components/card/card.component';
 
 @Component({
-  selector: 'ng-app-root',
-  standalone: true,
-  imports: [
-    BaseModalComponent,
-    CardComponent,
-    CommonModule,
-    FooterComponent,
-    HeaderComponent,
-    LoaderComponent,
-    RouterOutlet,
-    SidebarComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'ng-app-root',
+    imports: [
+        BaseModalComponent,
+        CardComponent,
+        CommonModule,
+        FooterComponent,
+        HeaderComponent,
+        LoaderComponent,
+        RouterOutlet,
+        SidebarComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
 

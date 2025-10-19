@@ -1,4 +1,4 @@
-# 18v-angular-app
+# 19v-angular-app
 
 <!-- This **Kudos Dashboard** project includes development using technologies:
 - Github Actions and workflows
