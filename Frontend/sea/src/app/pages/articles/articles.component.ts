@@ -27,10 +27,10 @@ import { CardComponent } from '../../components/card/card.component';
 })
 export class ArticlesComponent {
   
-  card = {
+  cards = [{
     title: 'Quizzes',
     subTitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eaque tempora.'
-  }
+  }];
 
   // accordion = viewChild.required(MatAccordion);
 

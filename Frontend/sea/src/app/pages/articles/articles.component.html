@@ -1,6 +1,8 @@
-<h2>Articles</h2>
+<h2>Some cards:</h2>
 
-<ng-app-card [card]="card"></ng-app-card>
+@for (card of cards; track card) {
+  <ng-app-card [card]="card"></ng-app-card>
+}
 
 
 
