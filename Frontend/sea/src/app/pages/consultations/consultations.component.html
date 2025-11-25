@@ -1,7 +1,79 @@
 <h2>Consultations</h2>
 
+<ng-app-child></ng-app-child>
+
+<p>-----------------------------------------</p>
+
 <mat-nav-list>
   @for (item of list; track item) {
     <a class="item" mat-list-item [routerLink]="item.link" [activated]="item.isActive">{{ item.title }}</a>
   }
 </mat-nav-list>
+
+<section class="block">
+  <div>subject1: {{ ( subject1 | async ) }}</div>
+  <button mat-button (click)="incrementSubjValue()">Click subject1</button>
+</section>
+<section class="block">
+  <div>subject1observable: {{ subject1observableView }}</div>
+  <button mat-button (click)="incrementObservValue7()">Click subject1observable 7</button>
+  <button mat-button (click)="incrementObservValue9()">Click subject1observable 9</button>
+</section>
+
+<section>
+  <div *ngFor="let word of (data$ | async); trackBy: trackByWord">{{ word }}</div>
+</section>
+
+
+
+<section>
+  <input type="text" (input)="onInput($event)">
+</section>
+
+<div>{{ logListRS$ | async }}</div>
+<div>{{ logListO$ | async }}</div>
+
+<button mat-button (click)="onClick()">onClick 1</button>
+
+<input #txt type="text" (input)="searchGood(txt.value)">
+
+@let goods = filteredGoods$ | async;
+<!-- @if (goods !== null && goods.length > 0) { -->
+@if (goods; as list) {
+  @if (goods.length > 0) {
+    <ul>
+      <!-- <li *ngFor=""></li> -->
+      @for (item of goods; track item.id) {
+        <li>{{ item.name }}</li>
+      }
+    </ul>
+  } @else {
+    <p>Нет данных...</p>
+  }
+} @else {
+  <p>Загрузка...</p>
+}
+
+
+<button (click)="loadd()">reload</button>
+
+<!-- <section class="block">
+  <div>subject2: {{ subject2 | async }}</div>
+  <button mat-button (click)=""></button>
+</section>
+<section class="block">
+  <div>subject3: {{ subject3 | async }}</div>
+  <button mat-button (click)=""></button>
+</section>
+<section class="block">
+  <div>subject4: {{ subject4 | async }}</div>
+  <button mat-button (click)=""></button>
+</section>
+<section class="block">
+  <div>observable1: {{ observable1 | async }}</div>
+  <button mat-button (click)=""></button>
+</section> -->
+
+
+
+<!-- <button mat-button (click)=""></button> -->
