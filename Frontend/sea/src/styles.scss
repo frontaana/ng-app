@@ -1,15 +1,33 @@
 @use './app/styles/index.scss';
+@use '@angular/material' as mat;
 
 :host {
   display: block;
   min-height: 100vh;
 }
 
-p {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}

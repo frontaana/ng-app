@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { routePaths } from './interfaces/enums';
 
-import { AboutComponent } from './pages/about/about.component';
 import { ConsultationsComponent } from './pages/consultations/consultations.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
-import { FormComponent } from './pages/form/form.component';
+import { FormComponent } from './pages/consultations/form/form.component';
+import { ProductionComponent } from './pages/production/production.component';
 
 
 export const routes: Routes = [
@@ -15,13 +15,16 @@ export const routes: Routes = [
     canActivate: [ ],
     canActivateChild: [],
     children: [
-      { path: '', redirectTo: routePaths.consultations, pathMatch: 'full'},
-      { path: routePaths.consultations, component: ConsultationsComponent, pathMatch: 'full'},
-      { path: `${routePaths.consultations}/${routePaths.map}`, component: ConsultationsComponent, pathMatch: 'full'},
-      { path: `${routePaths.consultations}/${routePaths.form}`, component: FormComponent, pathMatch: 'full'},
-      { path: routePaths.articles, component: ArticlesComponent, pathMatch: 'full'},
-      { path: routePaths.about, component: AboutComponent, pathMatch: 'full'},
-    
+      { path: '', redirectTo: routePaths.production, pathMatch: 'full'},
+      { path: routePaths.production, component: ProductionComponent, pathMatch: 'full', children: [
+        { path: routePaths.flows, component: ProductionComponent, pathMatch: 'full'},
+        { path: routePaths.domains, component: ProductionComponent, pathMatch: 'full'},
+      ]},
+      { path: routePaths.consultations, component: ConsultationsComponent, pathMatch: 'full', children: [
+        { path: routePaths.map, component: ConsultationsComponent, pathMatch: 'full'},
+        { path: routePaths.form, component: FormComponent, pathMatch: 'full'},
+      ]},
+      { path: routePaths.articles, component: ArticlesComponent, pathMatch: 'full'},    
     ]
   },
   { path: '**', redirectTo: '/'}

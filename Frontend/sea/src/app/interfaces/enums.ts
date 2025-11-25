@@ -4,4 +4,7 @@ export enum routePaths {
   map = 'map',
   articles = 'articles',
   form = 'form',
+  production = 'production',
+  flows = 'flows',
+  domains = 'domains',
 }

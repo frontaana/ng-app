@@ -1,3 +1,18 @@
-.item {
-    margin-left: -16px;
+@use '../app/styles/index.scss';
+
+$text-black: #212325;
+$page-background-color: #E4E2F0;
+
+:host {
+  display: block;
+  min-height: 100vh;
+  color: $text-black;
+  position: relative;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $page-background-color;
 }
