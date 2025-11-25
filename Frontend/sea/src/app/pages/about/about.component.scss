@@ -1,7 +1,7 @@
-@import '../../styles/index.scss';
+@use '../../styles/index.scss';
 
 :host {
-  @include page();
+  // @include page();
   align-items: center;
 }
 

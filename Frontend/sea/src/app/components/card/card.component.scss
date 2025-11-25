@@ -1,6 +1,11 @@
-@import '../../styles/index.scss';
+@use '../../styles/index.scss';
 
 $border-radius: 8px;
+
+$card-background-color: #FEFDFF;
+$violet: #7B69EF;
+$action-grey: #F9F8FD;
+$border-color: #EDF0EF;
 
 .card {
     max-width: 300px;

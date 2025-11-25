@@ -1,4 +1,7 @@
-@import '../../styles/index.scss';
+@use '../../styles/index.scss';
+
+$violet: #7B69EF;
+$text-dark-blue: #0A0A37;
 
 :host {
   width: 100%;

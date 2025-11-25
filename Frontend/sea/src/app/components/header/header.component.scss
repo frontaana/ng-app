@@ -1,4 +1,7 @@
-@import '../../styles/index.scss';
+@use '../../styles/index.scss';
+
+$card-background-color: #FEFDFF;
+$text-dark-blue: #0A0A37;
 
 .header {
   display: flex;
@@ -11,8 +14,8 @@
   }
 
   &__sidebar-icon {
-    @include icon-svg-hamburger($midnight-blue);
-    @include icon-size();
+    // @include icon-svg-hamburger($midnight-blue);
+    // @include icon-size();
 
     // &.opened {
     //     @include icon-svg-close($color-topaz);
