@@ -1,0 +1,57 @@
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-field, .tag-field {
+  width: 260px;
+}
+
+.actions {
+  margin-left: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.flow-card {
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.card-top {
+  .badge {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #dff7df;
+    color: #1b7a3a;
+    border-radius: 8px;
+}
+}
+
+.card-body {
+  margin: 12px 0;
+  h3 {
+    margin: 0;
+    font-size: 16px;
+}
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7280;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
