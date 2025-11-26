@@ -1,0 +1,64 @@
+<div class="controls">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search domains</mat-label>
+    <input matInput [(ngModel)]="search" placeholder="Search by domain..." />
+  </mat-form-field>
+
+  <div class="actions" style="margin-left:auto">
+    <button mat-stroked-button (click)="setPage(0)">Refresh</button>
+  </div>
+</div>
+
+<!-- <div class="toolbar">
+  <mat-select placeholder="Provider" [(value)]="filterProvider()"
+              (valueChange)="filterProvider.set($event)">
+    <mat-option value="AIO">AIO</mat-option>
+    <mat-option value="Cloudflare">Cloudflare</mat-option>
+  </mat-select>
+</div> -->
+
+<table mat-table [dataSource]="paged()" class="mat-elevation-z1 domains-table">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let d">{{ d.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="domain">
+    <th mat-header-cell *matHeaderCellDef>Domain</th>
+    <td mat-cell *matCellDef="let d">{{ d.domain }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="monitoring">
+    <th mat-header-cell *matHeaderCellDef>Monitoring</th>
+    <td mat-cell *matCellDef="let d">{{ d.monitoring ? 'Yes' : 'No' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let d">{{ d.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="provider">
+    <th mat-header-cell *matHeaderCellDef>Provider</th>
+    <td mat-cell *matCellDef="let d">{{ d.provider }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="['id','domain','monitoring','price','provider']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['id','domain','monitoring','price','provider']"></tr>
+</table>
+
+<div class="pagination">
+  <button mat-button (click)="setPage(page()-1)" [disabled]="page() === 0">‹ Prev</button>
+  <span>Page {{ page() + 1 }} / {{ totalPages() }}</span>
+  <button mat-button (click)="setPage(page()+1)" [disabled]="page()+1 >= totalPages()">Next ›</button>
+
+  <label class="perpage">
+    Per page:
+    <select [ngModel]="pageSize()" (ngModelChange)="pageSize.set($event); page.set(0)">
+      <option [value]="5">5</option>
+      <option [value]="10">10</option>
+      <option [value]="20">20</option>
+    </select>
+  </label>
+</div>
+

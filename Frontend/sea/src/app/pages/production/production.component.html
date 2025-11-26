@@ -1,1 +1,30 @@
-<p>production works!</p>
+<mat-toolbar color="primary" class="topbar">
+  <span class="brand">AAM <span class="erp">ERP</span></span>
+  <!-- <span class="spacer"></span>
+  <nav>
+    <a mat-button routerLink="/flows" routerLinkActive="active">Flows</a>
+    <a mat-button routerLink="/domains" routerLinkActive="active">Domains</a>
+  </nav> -->
+</mat-toolbar>
+
+<main class="main">
+    <section class="controls">
+      <button class="btn primary">+ Flow</button>
+      <div class="filters">
+        <button class="btn">Tags</button>
+        <button class="btn">Text</button>
+        <input class="search" placeholder="Search by uuid or name..." />
+        <div class="presets">
+          <button class="btn">Archived</button>
+          <button class="btn">Presets ▾</button>
+        </div>
+      </div>
+    </section>
+
+    <ng-app-flows></ng-app-flows>
+
+    <hr class="divider" />
+
+    <ng-app-domains></ng-app-domains>
+
+</main>

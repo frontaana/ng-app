@@ -2,18 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
-import { BaseModalComponent } from '../../components/base-modal/base-modal.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { HeaderComponent } from '../../components/header/header.component';
-import { LoaderComponent } from '../../components/loader/loader.component';
-import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
+import { HeaderComponent } from '../../shared/header/header.component';
+import { LoaderComponent } from '../../shared/loader/loader.component';
+import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
 import { LoaderService } from '../../services/loader.service';
+import { ModalComponent } from '../../shared/modal/modal.component';
 
 
 @Component({
     selector: 'ng-app-consultations',
     imports: [
-        BaseModalComponent,
+        ModalComponent,
         CommonModule,
         FooterComponent,
         HeaderComponent,

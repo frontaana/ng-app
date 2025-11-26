@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 
 import { contentData, Themes, Titles } from '../../interfaces/consultations';
 import { js_questions_response, ts_questions_response, html_questions_response, css_questions_response, architecture_questions_response, dev_tools_questions_response, protocols_questions_response } from '../../constants/competence-map';
-import { CardComponent } from '../../components/card/card.component';
+import { CardComponent } from '../../shared/card/card.component';
 
 @Component({
     selector: 'ng-app-articles',

@@ -1,0 +1,47 @@
+<div class="controls">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search by name</mat-label>
+    <input matInput [(ngModel)]="search" placeholder="Search flows..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="tag-field">
+    <mat-label>Tag</mat-label>
+    <mat-select [(value)]="selectedTag" (selectionChange)="selectedTag.set($event.value)">
+      <mat-option [value]="null">All</mat-option>
+      <mat-option *ngFor="let t of tags()" [value]="t">{{ t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-flat-button color="primary" (click)="openCreate()">+ New Flow</button>
+  </div>
+</div>
+
+<div class="grid">
+  <mat-card class="flow-card" *ngFor="let f of filtered()">
+    <div class="card-top">
+      <span class="badge">{{ f.badge }}</span>
+    </div>
+
+    <div class="card-body">
+      <h3>{{ f.title }}</h3>
+      <p class="muted">{{ f.type }}</p>
+    </div>
+
+    <div class="card-meta">
+      <div><strong>Tags</strong><span>{{ f.tags.length ? f.tags.join(', ') : 'Empty' }}</span></div>
+      <div><strong>Created</strong><span>{{ f.created }}</span></div>
+      <div><strong>Archived</strong><span>{{ f.archived ? 'Yes' : 'No' }}</span></div>
+    </div>
+  </mat-card>
+</div>
+
+<!-- Modal for create -->
+<ng-app-modal *ngIf="showCreateModal()" [title]="'Create Flow'" (closed)="closeCreate()">
+  <div style="display:flex; gap:12px; align-items:center;">
+    <div>Content for create form (demo)</div>
+    <div style="margin-left:auto">
+      <button mat-flat-button color="primary" (click)="createDemo()">Create</button>
+    </div>
+  </div>
+</ng-app-modal>
