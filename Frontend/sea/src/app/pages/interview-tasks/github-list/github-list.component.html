@@ -1,0 +1,12 @@
+<h1>{{ username() }} repositories </h1>
+<!-- @let
+@if -->
+<ul>
+    @for (rep of repositoriesList$ | async; track $index) {
+        <li> {{ rep.name }} </li>
+    }
+</ul>
+<!-- @else -->
+@if (!(hasRepositoriesList$ | async)) {
+    No repos
+}
